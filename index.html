@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#93dc9a">
+	<meta name="description" content="A cheerful forest adventure for learning English words.">
+	<title>English Adventure | Word Trail</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<div class="forest-backdrop" aria-hidden="true">
+		<span class="sunshine">☀</span><span class="sky-star star-one">✦</span><span class="sky-star star-two">✧</span>
+		<span class="canopy canopy-left">🌳</span><span class="canopy canopy-right">🌴</span>
+		<span class="hill hill-back"></span><span class="hill hill-front"></span>
+		<span class="ground-grass">🌿　🍄　🌼　🌱　🌷　🌿　🍄　🌼　🌱　🌷　🌿</span>
+	</div>
+	<main class="page">
+		<header class="topbar">
+			<a class="brand" href="#welcome" aria-label="English Adventure home"><span class="brand-mark" aria-hidden="true">🧭</span><span class="brand-name">English <b>Adventure</b></span></a>
+			<button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Mute sound"><span id="sound-icon" aria-hidden="true">🔊</span><span id="sound-label">Sound on</span></button>
+		</header>
+		<section class="welcome-screen" id="welcome-screen" aria-labelledby="welcome-title">
+			<div class="welcome-art" aria-hidden="true">
+				<div class="art-sun">☀</div><div class="art-cloud cloud-left"></div><div class="art-cloud cloud-right"></div>
+				<div class="art-tree tree-left"><span>🌳</span></div><div class="art-tree tree-right"><span>🌴</span></div>
+				<div class="art-bush bush-left">🌿</div><div class="art-bush bush-right">🌼</div><div class="art-path"></div>
+				<div class="art-character">🦊</div><span class="art-butterfly butterfly-one">🦋</span><span class="art-butterfly butterfly-two">✨</span>
+			</div>
+			<div class="welcome-copy">
+				<p class="eyebrow"><span aria-hidden="true">🍃</span> A word-finding forest quest</p>
+				<h1 id="welcome-title">Ready, little<br>explorer?</h1>
+				<p class="welcome-description">Follow the trail, solve the clues, and collect some wonderful new words!</p>
+				<button class="primary-button start-button" id="start-button" type="button"><span aria-hidden="true">🚀</span> Start my adventure <span aria-hidden="true">→</span></button>
+				<p class="welcome-note"><span aria-hidden="true">⭐</span> 8 clues <span aria-hidden="true">♥</span> 3 hearts <span aria-hidden="true">🦋</span> Lots of fun</p>
+			</div>
+			<div class="welcome-vine vine-left" aria-hidden="true">〰️🍃〰️</div><div class="welcome-vine vine-right" aria-hidden="true">〰️🌿〰️</div>
+		</section>
+		<section class="game-shell" id="game-shell" aria-label="English vocabulary game" hidden>
+			<header class="game-head">
+				<div class="level-label"><span class="level-icon" aria-hidden="true">🗺️</span><span>Forest path</span></div>
+				<div class="stats" aria-label="Game stats">
+					<div class="stat score-stat"><span aria-hidden="true">⭐</span> <span>Score</span> <strong id="score">0</strong></div>
+					<div class="stat lives-stat"><span aria-hidden="true">💚</span> <span>Hearts</span> <strong id="lives">3</strong></div>
+				</div>
+			</header>
+			<div class="game-content">
+				<section class="challenge" aria-live="polite">
+					<p class="question-count" id="question-count">Trail clue 1 of 8</p>
+					<h1 id="question-title">Find the right word!</h1>
+					<p class="clue" id="clue"></p>
+					<div class="answers" id="answers" role="group" aria-label="Choose an answer"></div>
+					<p class="feedback" id="feedback" role="status" aria-live="polite">Pick the word that best matches the clue.</p>
+					<button class="primary-button next-button" id="next-button" type="button" hidden>Next clue <span aria-hidden="true">🐾</span></button>
+					<button class="primary-button play-again" id="play-again" type="button" hidden><span aria-hidden="true">🔄</span> Play again</button>
+				</section>
+				<aside class="trail-panel" aria-label="Trail progress">
+					<div class="trail-topline"><span aria-hidden="true">🌱</span><p class="trail-heading">Your trail</p><span aria-hidden="true">🌱</span></div>
+					<div class="trail-map" id="trail-map" role="img" aria-label="Trail progress: clue 1 of 8"><div class="trail-line" aria-hidden="true"></div></div>
+					<p class="trail-caption" id="trail-caption">The forest entrance</p><div class="trail-friend" aria-hidden="true">🐸</div>
+				</aside>
+			</div>
+			<footer class="footer-note"><span>Every clue takes you further! <span aria-hidden="true">🌈</span></span><span>You're doing great, explorer!</span></footer>
+		</section>
+		<p class="page-footnote" aria-hidden="true">A little learning goes a long way <span>🍀</span></p>
+	</main>
+</body>
+</html>
